@@ -17,6 +17,7 @@
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.4",
     "auto-import-module": "^1.0.12",
+    "bson": "^6.2.0",
     "dotenv": "^16.3.1",
     "eslint-config-react-app": "^7.0.1",
     "force": "^0.0.3",
