@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import bookingRouter from "./routes/booking.route.js";
 import dotenv from "dotenv";
-import cors from "cors";
+
 
 dotenv.config();
 mongoose
@@ -20,9 +20,7 @@ app.use(express.json());
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
-app.use(cors({
-    credentials:true
-}));
+
 app.use("/api/auth", bookingRouter);
 
 app.use((err, req, res, next) => {
