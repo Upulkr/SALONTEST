@@ -7,7 +7,7 @@ import FooterTwo from "../Components/FooterTwo";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Booking() {
-  const form = useRef();
+
   const serviceId = "service_harv5jp"
   const templateId ="template_dps6k1z"
   const publicKey ="b1J72K4ktNOgANnsP"
@@ -16,6 +16,7 @@ function Booking() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [records, setRecords] = useState([]);
+
   const ref = useRef(null);
   // const navigate = useNavigate();
   const handleChange = (e) => {
@@ -27,7 +28,7 @@ function Booking() {
 
     try {
       setLoading(true);
-      const res = await fetch("/api/auth/booking", {
+      const res = await fetch("https://salontest-y3ln.vercel.app/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
