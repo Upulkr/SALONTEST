@@ -7,7 +7,7 @@ server:{
   
   proxy:{
     '/api':{
-      target:'http://localhost:3000',
+      target:'https://salontest-y3ln-f1zktadju-upulkr.vercel.app/',
       secure:false
     },
   },
