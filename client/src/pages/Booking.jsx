@@ -73,7 +73,7 @@ function Booking() {
   console.log(formData);
   return (
     <>
-      <div className="grid-row-2  grid bg-white  ">
+      <div className="grid-row-2  grid bg-white dark:bg-black  ">
         <ToastContainer />
         <div className=" mt-14 justify-center p-10 ">
           <h1 className="  text-center text-2xl font-extrabold  dark:text-white ">
