@@ -97,22 +97,22 @@ export default function Header() {
           <IconButton
             variant="text"
             size="sm"
-            color="white"
-            className="bg-white text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent dark:text-white"
+            color="black"
+            className=""
             onClick={() => setOpen(!open)}
           >
             {open ? (
-              <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+              <XMarkIcon strokeWidth={3} className="h-6 w-6 " />
             ) : (
-              <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+              <Bars3Icon strokeWidth={3} className="h-6 w-6" />
             )}
           </IconButton>
         </div>
         <MobileNav 
-          className="rounded-xl bg-white px-4 pb-4 pt-2 text-blue-gray-900 dark:text-white"
+          className="text-blue-gray-900 "
           open={open}
         >
-          <div className="mx-auto dark:text-white ">
+          <div className="mx-auto   ">
             <ul className="text-center">
             {pageTitle.map((t)=><li className=" max-lg:border-b max-lg:py-2 text-[#007bff] sm:mx-2" key={t.id}>
             <NavLink
@@ -125,7 +125,7 @@ export default function Header() {
             </ul>
           </div>
         </MobileNav>
-        <ul className=" mb-4 max-lg:space-y-3 max-lg:block max-lg:mt-2 invisible flex w-full justify-center sm:visible lg:space-x-10 ">
+        <ul className=" mb-3 max-lg:space-y-3 max-lg:block max-lg:mt-2 invisible flex w-full justify-center sm:visible lg:space-x-10 ">
           {pageTitle.map((t)=><li className=" max-lg:border-b max-lg:py-2 text-[#007bff] sm:mx-2" key={t.id}>
             <NavLink
               to={t.path}

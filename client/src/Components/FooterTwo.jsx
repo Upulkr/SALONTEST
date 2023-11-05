@@ -2,18 +2,18 @@ function FooterTwo() {
     return (
         <>
         {/* Footer container */}
-        <footer className=" bg-white dark:bg-black bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left ">
-          <div className=" bg-white dark:bg-black flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        <footer className=" bg-white text-center text-neutral-600   lg:text-left ">
+          <div className=" bg-white flex items-center justify-center border-b-2 border-neutral-200 p-6  lg:justify-between">
            
           
             
           </div>
           {/* Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. */}
-          <div className=" bg-white dark:bg-black mx-6 py-10 text-center md:text-left">
-            <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="bg-white  mx-6 py-10 text-center md:text-left">
+            <div className="bg-white grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {/* TW elements section */}
-              <div className="">
-                <h6 className=" bg-white dark:bg-black mb-4 flex items-center justify-center font-semibold uppercase md:justify-start dark:text-white">
+              <div className="bg-white">
+                <h6 className=" text-black mb-4 flex items-center justify-center font-semibold uppercase md:justify-start ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -24,64 +24,64 @@ function FooterTwo() {
                   </svg>
                   Salon Toronto
                 </h6>
-                <p className="dark:text-white">
+                <p className="text:black font-bold">
                 "Feel your best at Salon Toronto. Treat yourself to expert hair and body therapy that leaves you refreshed and glowing. Visit us for a revitalizing experience today!"
                 </p>
               </div>
               {/* Products section */}
-              <div className="">
-                <h6 className=" mb-4 flex justify-center font-semibold uppercase md:justify-start  dark:text-white">
+              <div className="bg-white">
+                <h6 className="text:black  mb-4 flex justify-center font-semibold uppercase md:justify-start">
             Hair
                 </h6>
-                <p className="mb-4 dark:text-white">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className="mb-4 text:black">
+                  <a href="#!" className="text-black">
                   Haircuts
                   </a>
                 </p>
-                <p className="mb-4 dark:text-white">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className="mb-4 :text-white">
+                  <a href="#!" className="text-black">
                   Coloring
                   </a>
                 </p>
-                <p className="mb-4 dark:text-white">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className="mb-4 ">
+                  <a href="#!" className=" text-black">
                   Hair Ext.
                   </a>
                 </p>
-                <p className=" dark:text-white"> 
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className=" text-black"> 
+                  <a href="#!" className="  text-black">
                   Waxing
                   </a>
                 </p>
               </div>
               {/* Useful links section */}
               <div className="">
-                <h6 className=" dark:text-white mb-4 flex justify-center font-semibold uppercase md:justify-start dark:text-white">
+                <h6 className=" text-black mb-4 flex justify-center font-semibold uppercase md:justify-start ">
              Body
                 </h6>
-                <p className="mb-4 dark:text-white">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className="mb-4 ">
+                  <a href="#!" className=" text-black">
                   Ayurvedic Mineral Salt Scrub
                   </a>
                 </p>
-                <p className="mb-4 dark:text-white">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                <p className="mb-4 ">
+                  <a href="#!" className=" text-black">
                   Enzymatic Sea Mud Wrap
                   </a>
                 </p>
                 <p className="mb-4">
-                  <a href="#!" className=" bg-white dark:bg-black text-neutral-600 dark:text-neutral-200 dark:text-white">
+                  <a href="#!" className="text-black">
                   Scalp Massage
                   </a>
                 </p>
            
               </div>
            
-              <div>
-                <h6 className="bg-white dark:bg-black mb-4 flex justify-center font-semibold uppercase md:justify-start dark:text-white">
+              <div className="bg-white">
+                <h6 className="text-black mb-4 flex justify-center font-semibold uppercase md:justify-start dark:text-white">
                   Contact
                 </h6>
-                <p className="bg-white dark:bg-black mb-4 flex items-center justify-center md:justify-start dark:text-white">
+                <p className="text-black mb-4 flex items-center justify-center md:justify-start dark:text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -93,7 +93,7 @@ function FooterTwo() {
                   </svg>
                  Toronto, NY 10012, US
                 </p>
-                <p className="bg-white dark:bg-black mb-4 flex items-center justify-center md:justify-start dark:text-white">
+                <p className=" mb-4 flex items-center justify-center md:justify-start text-black">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -105,7 +105,7 @@ function FooterTwo() {
                   </svg>
                   info@example.com
                 </p>
-                <p className=" dark:text-white  bg-white dark:bg-black mb-4 flex items-center justify-center md:justify-start">
+                <p className=" text-black mb-4 flex items-center justify-center md:justify-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -125,10 +125,10 @@ function FooterTwo() {
             </div>
           </div>
           {/*Copyright section*/}
-          <div className="bg-white dark:bg-black bg-neutral-200 p-6 text-center dark:bg-neutral-700 dark:text-white">
+          <div className="text-black bg-white xl:text-center">
             <span>© 2023 Copyright:</span>
             <a
-              className=" dark:text-white font-semibold text-neutral-600 dark:text-neutral-400"
+              className="text-black"
               href="https://tw-elements.com/"
             >
               SALON TORONTO

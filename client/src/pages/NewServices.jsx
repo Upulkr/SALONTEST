@@ -11,7 +11,7 @@ export default function Example() {
               <h1 className=" text-black text-4xl font-bold tracking-tight  sm:text-6x  dark:text-whitel">
              <Slide direction="left"> Salon Toronto - Where Wellness Comes to You</Slide>
               </h1>
-              <p className="mt-4 text-xl text-gray-500  text-black">
+              <p className="mt-4 text-xl   text-black">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesnt care
                 if you live or die.
               </p>

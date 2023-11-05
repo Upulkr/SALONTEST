@@ -76,13 +76,13 @@ function Booking() {
   console.log(formData);
   return (
     <>
-      <div className="grid-row-2  grid bg-white dark:bg-black  ">
+      <div className="grid-row-2  grid bg-white  ">
         <ToastContainer />
-        <div className=" mt-14 justify-center p-10 ">
-          <h1 className="  text-center text-2xl font-extrabold  dark:text-white ">
+        <div className=" mt-14 justify-center p-10 bg-white">
+          <h1 className="  text-center text-2xl font-bold text-black">
             Book an appointment
           </h1>
-          <p className=" p-3 text-center text-lg  dark:text-white">
+          <p className=" p-3 text-center text-lg  text-black">
             Get an appointment with our experienced Stylists & therapists
           </p>
         </div>
@@ -98,7 +98,7 @@ function Booking() {
           </div>{" "}
           <div className="flex items-center justify-center">
             <form
-              className=" w-2/3 justify-center "
+              className=" w-2/3 justify-center  "
               ref={ref}
               onSubmit={handleSubmit}
               onChange={handleChange}
@@ -117,7 +117,7 @@ function Booking() {
                   name="name"
                   id="name"
                   placeholder="Full Name"
-                  className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md border-gray-500"
                 />
               </div>
               <div className="mb-5">
@@ -132,7 +132,7 @@ function Booking() {
                   name="phone"
                   id="phone"
                   placeholder="Enter your phone number"
-                  className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  className="border-gray-500 w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 />
               </div>
               <div className="mb-5">
@@ -148,7 +148,7 @@ function Booking() {
                   name="email"
                   id="email"
                   placeholder="Enter your email"
-                  className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                  className="border-gray-500 w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 />
               </div>
               <div className="-mx-3 flex flex-wrap">
@@ -156,7 +156,7 @@ function Booking() {
                   <div className="mb-5">
                     <label
                       htmlFor="date"
-                      className="  mb-3 block text-base font-medium text-[#07074D] dark:text-white"
+                      className="  mb-3 block text-base font-medium text-[#07074D] "
                     >
                       Date
                     </label>
@@ -165,7 +165,7 @@ function Booking() {
                       type="date"
                       name="date"
                       id="date"
-                      className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      className="border-gray-500 w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     />
                   </div>
                 </div>
@@ -182,7 +182,7 @@ function Booking() {
                       type="time"
                       name="time"
                       id="time"
-                      className="w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                      className="border-gray-500 w-full rounded-md border border-blue-gray-900 bg-white p-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     />
                   </div>
                 </div>

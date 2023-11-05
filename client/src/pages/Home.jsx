@@ -23,30 +23,28 @@ export function Home() {
         <Example />
       </section>
 
-      <section className="m-7 px-4 pb-10 pt-4 bg-white ">
+      <section className=" px-4 pb-10 pt-4 ">
         <div className="container mx-auto">
-          <Typography
-            variant="h1"
-            color="black"
-            className="mb-8 text-center font-black  dark:text-white"
+          <h1
+           
+            className="text-center font-black xl:text-3xl md:text-2xl uppercase  "
           >
             Our happy clients say about us
-          </Typography>
+          </h1>
         </div>
 
         <Testomonials />
       </section>
 
-      <section className=" bg-white  px-4 pb-20 pt-4 overflow-y-hidden">
+      <section className="  mb-4 px-4 pb-20 pt-4 overflow-y-hidden">
         <div className="container mx-auto overflow-y-hidden">
-          <Typography
-            variant="h1"
-            color="Black"
-            className="mb-8 text-center font-black  dark:text-white"
+          <h1
+           
+            className="mb-8 text-center font-black xl:text-3xl md:text-2xl "
           >
             MEET THE EXPERTS
-          </Typography>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white overflow-y-hidden ">
+          </h1>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white overflow-x-hidden   overflow-y-hidden ">
             {teamData.map(({ img, name, position, socials, id }) => (
               <TeamCard
                 key={id}

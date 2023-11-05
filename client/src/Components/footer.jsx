@@ -2,6 +2,10 @@ import PropTypes from 'prop-types';
 import { Typography, IconButton } from "@material-tailwind/react";
 import { OpenTimes } from '../../public/data/OpenTimes';
 import OpenHours from '../pages/OpenHours'
+import { BsFacebook } from 'react-icons/bs';
+import { BsYoutube } from 'react-icons/bs';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,30 +14,24 @@ const year = new Date().getFullYear();
 const Footer = ({ title, description, socials, copyright }) => {
   return (
     <>
-   <footer className="   relative px-4 pt-8 pb-6 text-black bg-white sm:flex-cols-1 mr-3">
+   <footer className="    relative  pt-9 text-black bg-white sm:flex-cols-1    ">
         <div className=" grid sm:grid-cols-1 lg:grid-cols-1 md:cols-1 xl:grid-cols-3 justify-center mx-auto ">
-          <div className="flex flex-wrap pt-6 text-center lg:text-left pb-4">
-            <div className="w-full px-4 lg:w-6/12 j mx-auto">
-              <Typography variant="h2" className=" text-black mx-auto grid w-max text-center" color="text-black">
+          <div className="flex flex-wrap  text-center lg:text-left ">
+            <div className="w-full  lg:w-6/12 ml-2 ">
+              <Typography variant="h2" className="uppercase text-black mx-auto grid w-max text-center" color="text-black">
                 {title}
               </Typography>
-              <Typography className="text-black text-center font-normal">
+              <Typography className="ml-2 p-4 text-black text-center font-normal justify-center">
                 {description}
               </Typography>
-              <div className=" mx-auto mt-6 mb-8 ml-5 flex justify-center gap-2 md:mb-0 lg:justify-start ">
-                {socials.map(({ color, name, path }) => (
-                  <a key={name} href={path} target="_blank" rel="noopener noreferrer">
-                    <IconButton className="rounded-full">
-                      <Typography color={color}>
-                        <i className={`fa-brands fa-${name}`} />
-                      </Typography>
-                    </IconButton>
-                  </a>
+              <div className=" mx-auto mt-6 mb-8 ml-5 flex justify-center gap-2 md:mb-0  ">
+                {socials.map(({icon,path}) => (
+                 <Link to={path} ><p className='xl:text-2xl mx-auto justify-center'>{icon}</p></Link>
                 ))}
               </div>
             </div>
           </div>
-          <div className=" mr-3 flex justify-between xl:justify-center lg:w-2/3 md:w-1/2 xl:w-full sm:flex-cols-1 lg:flex-cols-1 md:flex-cols-1 bg-black-300 rounded-lg overflow-hidden sm:mr-10 p-10  items-end relative mx-auto ">
+          <div className=" m-3 flex justify-between xl:justify-center lg:w-2/3 md:w-1/2 xl:w-full sm:flex-cols-1 lg:flex-cols-1 md:flex-cols-1 bg-black-300 rounded-lg overflow-hidden sm:mr-10 p-10  items-end relative mx-auto ">
             <iframe
               width="100%"
               height="100%"
@@ -69,15 +67,15 @@ const Footer = ({ title, description, socials, copyright }) => {
           </div>
         </div>
       </footer>
-      <div className="flex flex-wrap items-center justify-center md:justify-between">
+      <div className="flex flex-wrap items-center justify-center md:justify-between  bg-white">
       <div className="mx-auto w-full px-4 text-center">
-        <Typography
-          variant="small"
-          className="font-normal text-black"
+        <p
+  
+          className="font-normal text-black text-sm"
         >
          
           {copyright}
-        </Typography>
+        </p>
       </div>
      
     </div>
@@ -85,36 +83,26 @@ const Footer = ({ title, description, socials, copyright }) => {
   );
 };
 
-Footer.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  socials: PropTypes.arrayOf(
-    PropTypes.shape({
-      color: PropTypes.string,
-      name: PropTypes.string,
-      path: PropTypes.string,
-    })
-  ).isRequired,
-  copyright: PropTypes.element.isRequired,
-};
+
 
 Footer.defaultProps = {
-  title: "Salon Noya",
-  description: "Your hair & body is a reflection of your personality",
+  title: "Salon Toronto",
+  description:
+    "Your hair & body is a reflection of your personality",
   socials: [
-    {
-      color: "blue",
-      name: "facebook",
+    {icon:<BsFacebook/>,
+      // color: "blue",
+      // name: "facebook",
       path: "https://www.facebook.com/CreativeTim",
     },
-    {
-      color: "light-blue",
-      name: "twitter",
+    {icon:<BsYoutube/>,
+      // color: "light-blue",
+      // name: "twitter",
       path: "https://www.twitter.com/creativetim",
     },
-    {
-      color: "red",
-      name: "youtube",
+    {icon:<AiOutlineTwitter/>,
+      // color: "red",
+      // name: "youtube",
       path: "https://www.youtube.com/",
     },
   ],

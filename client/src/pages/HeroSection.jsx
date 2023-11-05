@@ -47,14 +47,14 @@ const HeroSection = () => {
             <div className="overflow-x-hidden  overflow-y-hidden overflow-x absolute right-0 top-1/2 flex h-1/2 w-full flex-col justify-start gap-2 px-4 md:top-0 md:h-full md:w-[50%] md:justify-center md:gap-4 md:px-6 lg:gap-8 lg:px-20 bg-white">
               <Text
                 as="h1"
-                className="text-white-100 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600 text-deep-orange-900 drop-shadow-2xl"
+                className="text-red-600 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600 text-deep-orange-900 drop-shadow-2xl"
               >
                 <Slide direction="right">{hero.Heading}</Slide>
               </Text>
               <Text as="h3" className="text-zinc-400 my-4 text-base lg:text-lg">
                 <Slide
                   direction="left"
-                  className="text-black-900 text-2xl xl:text-4xl font-extrabold"
+                  className="text-slate-900 text-2xl xl:text-4xl font-extrabold"
                 >
                   {hero.Paragraph}
                 </Slide>
