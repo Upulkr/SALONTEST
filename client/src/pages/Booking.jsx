@@ -27,7 +27,7 @@ function Booking() {
 
     try {
       setLoading(true);
-      const res = await fetch("/api/auth/booking", {
+      const res = await fetch("https://toronto-api-oxk1.vercel.app/api/booking", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
