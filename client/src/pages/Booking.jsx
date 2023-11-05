@@ -7,11 +7,10 @@ import FooterTwo from "../Components/FooterTwo";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Booking() {
+  const serviceId = "service_harv5jp";
+  const templateId = "template_dps6k1z";
+  const publicKey = "b1J72K4ktNOgANnsP";
 
-  const serviceId = "service_harv5jp"
-  const templateId ="template_dps6k1z"
-  const publicKey ="b1J72K4ktNOgANnsP"
- 
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -28,27 +27,28 @@ function Booking() {
 
     try {
       setLoading(true);
-     const res = await fetch("/api/auth/booking", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
+      const res = await fetch("/api/auth/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const data = await res.json();
       console.log(data);
       if (data.success === false) {
         setLoading(false);
         setError(data.message);
-        toast.error('already time is booked, or email is already existing. Please try again or call us');
+        toast.error(
+          "already time is booked, or email is already existing. Please try again or call us"
+        );
         setRecords([...records, formData]);
         setFormData({
           email: "",
           time: "",
           phone: "",
-          date:""
+          date: "",
         });
         return;
       } else {
@@ -128,6 +128,7 @@ function Booking() {
                   Phone Number
                 </label>
                 <input
+                  required
                   type="text"
                   name="phone"
                   id="phone"
@@ -143,6 +144,7 @@ function Booking() {
                   Email Address
                 </label>
                 <input
+                  required
                   value={formData.email}
                   type="email"
                   name="email"
@@ -161,6 +163,7 @@ function Booking() {
                       Date
                     </label>
                     <input
+                      required
                       value={formData.date}
                       type="date"
                       name="date"
@@ -178,6 +181,7 @@ function Booking() {
                       Time
                     </label>
                     <input
+                      required
                       value={formData.time}
                       type="time"
                       name="time"

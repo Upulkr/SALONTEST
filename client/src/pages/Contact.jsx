@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Contact() {
-
+  const [loading, setLoading] = useState(false);
   const serviceId = "service_g1xvxic"
   const templateId ="template_2qqvyjj"
   const publicKey = "b1J72K4ktNOgANnsP"
@@ -21,12 +21,15 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setLoading(true)
     // emailJs.sendForm('service_g1xvxic','template_2qqvyjj',e.target,'1oNKaXQwiTyrAENQ9',)
     emailJs.sendForm(serviceId, templateId, e.target, publicKey,).then((result)=>{
       console.log(result.text);
+      setLoading(false)
       toast.success('Well done')
+
     },(error)=>{console.log(error.text);
+      setLoading(false)
       toast.error('not submitted')})
 
 
@@ -96,7 +99,7 @@ function Contact() {
                 </label>
                 <input
                   onChange={(e) => setFormValues({ ...formValues, name: e.target.value })}
-             
+                  required
                   type="text"
                   id="name"
                   name="name"
@@ -109,7 +112,7 @@ function Contact() {
                 </label>
                 <input
                   onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
-              
+                  required
                   type="email"
                   id="email"
                   name="email_from"
@@ -121,7 +124,7 @@ function Contact() {
                   Message
                 </label>
                 <textarea
-                  
+                   required
                
                   id="message"
                   name="message"
@@ -130,7 +133,7 @@ function Contact() {
               </div>
               <div className="flex justify-center">
                 <button type='submit' className=" rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none text-center">
-                  Submit
+                {loading?'Submitting':'Submit'}
                 </button></div>
 
               {/* <p className="mt-3 text-xs text-gray-500">
