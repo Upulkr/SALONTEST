@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "toronto",
   "builds": [
     {
       "src": "index.js", 
